@@ -1,12 +1,16 @@
 import React from "react";
 import AddForm from "../components/form";
-import Todos from "../components/todos";
+import Contacts from "../components/contacts";
+import { useSelector } from "react-redux";
 
 const Layout = () => {
+
+  const formData = useSelector((state)=>state.contactsList.formData)
+  // console.log(formData)
   return (
     <>
-      <AddForm />
-      <Todos></Todos>
+      <AddForm formData={formData}/>
+      <Contacts/>
     </>
   );
 };

@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todoSlice from "./features/todo-slice";
+import contactSlice from "./features/contactSlice";
 
 const store = configureStore({
   reducer: {
-    todosList: todoSlice,
+    contactsList: contactSlice,
   },
 });
 
